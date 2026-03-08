@@ -5,21 +5,21 @@
 class Octunnel < Formula
   desc "Expose OpenCode server via Cloudflare Tunnel"
   homepage "https://github.com/chabinhwang/octunnel"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/chabinhwang/octunnel/releases/download/v0.1.1/octunnel_darwin_amd64.tar.gz"
-      sha256 "e44796a6b82b5747d5a46080b3f83a6fe913ff41d30fa52dfb5a7adf23737320"
+      url "https://github.com/chabinhwang/octunnel/releases/download/v0.1.2/octunnel_darwin_amd64.tar.gz"
+      sha256 "253fdd53df935e99dbdcab03660626f76142893f74ae36ee8f4b3561846bf79a"
 
       define_method(:install) do
         bin.install "octunnel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/chabinhwang/octunnel/releases/download/v0.1.1/octunnel_darwin_arm64.tar.gz"
-      sha256 "fe712e07a035b2860694b2bb3f62da78b8ce24bc8b0862fbabadab4b12c53bb1"
+      url "https://github.com/chabinhwang/octunnel/releases/download/v0.1.2/octunnel_darwin_arm64.tar.gz"
+      sha256 "f5465f8494cbb612b18a7f975208afc05e63ee2272a192a0688488e9bf06c8fa"
 
       define_method(:install) do
         bin.install "octunnel"
@@ -29,15 +29,15 @@ class Octunnel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chabinhwang/octunnel/releases/download/v0.1.1/octunnel_linux_amd64.tar.gz"
-      sha256 "07e46568bb4f0d573bb8371097e5f912ac2565143b2337141407134b56b7cea5"
+      url "https://github.com/chabinhwang/octunnel/releases/download/v0.1.2/octunnel_linux_amd64.tar.gz"
+      sha256 "24125de087e868e395de9baf1d51d524ff172996ebca4efbd3bfcedf9b9b60f7"
       define_method(:install) do
         bin.install "octunnel"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chabinhwang/octunnel/releases/download/v0.1.1/octunnel_linux_arm64.tar.gz"
-      sha256 "140089708a0e86dee2067c74d5ed45f363a9972bccdbdeeb11e3c3771141181a"
+      url "https://github.com/chabinhwang/octunnel/releases/download/v0.1.2/octunnel_linux_arm64.tar.gz"
+      sha256 "a9030a917fa30e65cf5f4d36b21b42e670a37d3596b00d16100858970a9cc499"
       define_method(:install) do
         bin.install "octunnel"
       end
